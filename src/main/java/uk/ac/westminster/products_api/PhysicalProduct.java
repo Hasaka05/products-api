@@ -5,6 +5,7 @@ package uk.ac.westminster.products_api;
 // because it contains products rather than being a product.
 
 public class PhysicalProduct extends Product implements Discountable {
+public class PhysicalProduct extends Product {
 
     private double weightKg;
     private String dimensions;
@@ -35,21 +36,5 @@ public class PhysicalProduct extends Product implements Discountable {
 
     public void setDimensions(String dimensions) {
         this.dimensions = dimensions;
-    }
-
-    @Override
-    public String getSummary(){
-        return getName() + " - Physical Product (Weight: " + weightKg + " kg)";
-    }
-
-    @Override
-    public void applyDiscount(double rate) {
-        double capped = Math.min(rate, 0.20);
-        discountedPrice = getPrice() * (1 - capped);
-    }
-
-    @Override
-    public double getDiscountedPrice() {
-        return discountedPrice;
     }
 }
