@@ -1,7 +1,6 @@
 package uk.ac.westminster.products_api;
 
 public class DigitalProduct extends Product implements Discountable {
-public class DigitalProduct extends Product {
 
     private String downloadUrl;
     private double fileSizeMB;

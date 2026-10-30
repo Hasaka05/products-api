@@ -4,8 +4,7 @@ package uk.ac.westminster.products_api;
 // product details from Product. A ShoppingCart is not a Product
 // because it contains products rather than being a product.
 
-public class PhysicalProduct extends Product implements Discountable {
-public class PhysicalProduct extends Product {
+public class PhysicalProduct extends Product implements Discountable{
 
     private double weightKg;
     private String dimensions;
