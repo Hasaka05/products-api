@@ -14,6 +14,11 @@ public class PhysicalProduct extends Product implements Discountable{
         super();
     }
 
+    @Override
+    public String getSummary() {
+        return "";
+    }
+
     public PhysicalProduct(Long id, String name, double price,
                            double weightKg, String dimensions) {
         super(id, name, price);
@@ -35,5 +40,15 @@ public class PhysicalProduct extends Product implements Discountable{
 
     public void setDimensions(String dimensions) {
         this.dimensions = dimensions;
+    }
+
+    @Override
+    public void applyDiscount(double rate) {
+
+    }
+
+    @Override
+    public double getDiscountedPrice() {
+        return 0;
     }
 }
